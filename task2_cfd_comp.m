@@ -1,4 +1,3 @@
-
 a = 45;
 V_0 = 50;
 u_f = 0;
@@ -37,9 +36,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/3*2);
-plot(y(:,1),y(:,3),'k')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 45^o u_f = 0 m/s', ...
-     'Color', 'k', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'k.')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 45^o u_f = 0 m/s', ...
+%     'Color', 'k', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 grid on
 grid minor
 hold on
@@ -82,9 +81,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/3*2);
-plot(y(:,1),y(:,3),'k')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 30^o u_f = 0 m/s', ...
-     'Color', 'k', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'k.--')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 30^o u_f = 0 m/s', ...
+%     'Color', 'k', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 60;
 V_0 = 50;
@@ -124,9 +123,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/3*2);
-plot(y(:,1),y(:,3),'k')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 60^o u_f = 0 m/s', ...
-     'Color', 'k', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'k.-')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 60^o u_f = 0 m/s', ...
+%     'Color', 'k', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 45;
 V_0 = 50;
@@ -166,9 +165,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/5*4);
-plot(y(:,1),y(:,3),'b--')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 45^o u_f = 20 m/s', ...
-     'Color', 'b', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'b.')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 45^o u_f = 20 m/s', ...
+ %    'Color', 'b', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 30;
 V_0 = 50;
@@ -208,9 +207,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/5*4);
-plot(y(:,1),y(:,3),'b--')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 30^o u_f = 20 m/s', ...
-     'Color', 'b', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'b.--')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 30^o u_f = 20 m/s', ...
+%     'Color', 'b', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 60;
 V_0 = 50;
@@ -250,9 +249,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/5*4);
-plot(y(:,1),y(:,3),'b--')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 60^o u_f = 20 m/s', ...
-     'Color', 'b', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'b.-')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 60^o u_f = 20 m/s', ...
+    % 'Color', 'b', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 45;
 V_0 = 50;
@@ -292,9 +291,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/7*4);
-plot(y(:,1),y(:,3),'r--')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 45^o u_f = -20 m/s', ...
-     'Color', 'r', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'r.')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 45^o u_f = -20 m/s', ...
+   %  'Color', 'r', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 30;
 V_0 = 50;
@@ -334,9 +333,9 @@ end
 figure (1)
 
 mid_idx = round(length(t)/7*4);
-plot(y(:,1),y(:,3),'r--')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 30^o u_f = -20 m/s', ...
-     'Color', 'r', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'r.--')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 30^o u_f = -20 m/s', ...
+   %  'Color', 'r', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 a = 60;
 V_0 = 50;
@@ -376,10 +375,12 @@ end
 figure (1)
 
 mid_idx = round(length(t)/7*4);
-plot(y(:,1),y(:,3),'r--')
-text(y(mid_idx,1), y(mid_idx,3), '\theta = 60^o u_f = -20 m/s', ...
-     'Color', 'r', 'FontSize', 11, 'VerticalAlignment', 'bottom');
+plot(y(:,1),y(:,3),'r.-')
+%text(y(mid_idx,1), y(mid_idx,3), '\theta = 60^o u_f = -20 m/s', ...
+    % 'Color', 'r', 'FontSize', 11, 'VerticalAlignment', 'bottom');
 
 xlabel('x, m')
 ylabel('y, m')
 title('Trajectory for steel spherical projectile, d = 0.05 m, V_0 = 50 m/s')
+legend('\theta = 45^o u_f = 0 m/s','\theta = 30^o u_f = 0 m/s','\theta = 60^o u_f = 0 m/s','\theta = 45^o u_f = 20 m/s','\theta = 30^o u_f = 20 m/s',...
+'\theta = 60^o u_f = 20 m/s','\theta = 30^o u_f = -20 m/s','\theta = 60^o u_f = -20 m/s')
