@@ -30,16 +30,26 @@ sgtitle('Одномерное волновое уравнение')
 
 subplot(4,1,1)
 plot(xgrid,u(:,1))
-title(sprintf('t = %.d c',tau*0));
+title(sprintf('t = 0 c'));
+ylabel('u, м/с')
+xlabel('x, м')
 subplot(4,1,2)
 plot(xgrid,u(:,16))
 title(sprintf('t = %.d c',tau*16));
+ylabel('u, м/с')
+xlabel('x, м')
 subplot(4,1,3)
 plot(xgrid,u(:,35))
 title(sprintf('t = %.d c',tau*35));
+ylabel('u, м/с')
+xlabel('x, м')
 subplot(4,1,4)
 plot(xgrid,u(:,45))
 title(sprintf('t = %.d c',tau*45));
+ylabel('u, м/с')
+xlabel('x, м')
+
+
 
 
 
