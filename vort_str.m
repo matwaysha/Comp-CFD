@@ -1,6 +1,6 @@
 function dydt = vort_str(t,y,m,G) 
 
-dydt = zeros(40,1);
+dydt = zeros(m,1);
 G_t = [-1.*fliplr(G),G];
 Y_t = [fliplr(y(m/2+1:end)'),y(m/2+1:end)'];
 X_t = [-1*fliplr(y(1:m/2)'),y(1:m/2)'];
@@ -13,4 +13,3 @@ for i = 1:m/2
 end
 
 
-    
