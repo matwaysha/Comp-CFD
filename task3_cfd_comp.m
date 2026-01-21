@@ -1,32 +1,43 @@
+clear
+clc
 
-
-m = 60;
+m = 30;
 M = 1/m*ones(1,m/2);
 X = zeros(1,m/2);
 X = linspace(-1+1/m,1-1/m,m);
 X = X(m/2 + 1:end);
-%             factor = 1.3;
-%             geo = zeros(1, m+2);
-%             geo(1) = 0;
-%             for j = 2:m+2
-%                 geo(j) = geo(j-1) + factor^(j-2);
-%             end
-%             X = 1 - geo ./ geo(end);
-%             X = fliplr(X);
-%             t_uniform = linspace(0,1,m/2+1);
-%             k = 3;
-%             X_t = 1 - (exp(k * t_uniform) - 1) / (exp(k) - 1);
-%             X_t = fliplr(X_t);
-% 
-%             for i=1:m/2
-%                 M(i) = (X_t(i+1)-X_t(i))/2;
-%                 X(i) = X_t(i) + M(i);
-%             end
 
 
 Y = zeros(1,m/2);
 G = sqrt(1-(X + M).^2) - sqrt(1-(X - M).^2);
 y_0 = [X,Y];
-T_max = 0.35;
+T_max = 0.25;
 [t,y] = ode45(@(t,y) vort_str(t,y,m,G),[0 T_max],y_0);
+
+n = length(t);
+
+figure (1)
+sgtitle('Вихревая пелена за эллиптическим крылом')
+
+subplot(4,1,1)
+plot(y(1,1:m/2),y(1,m/2+1:m),'*k')
+title(sprintf('t = 0 c'));
+ylabel('y')
+xlabel('x')
+subplot(4,1,2)
+plot(y(floor(n/3),1:m/2),y(floor(n/3),m/2+1:m),'*k')
+title(sprintf('t = %.d c',t(floor(n/3))));
+ylabel('y')
+xlabel('x')
+subplot(4,1,3)
+plot(y(floor(2*n/3),1:m/2),y(floor(2*n/3),m/2+1:m),'*k')
+title(sprintf('t = %.d c',t(floor(2*n/3))));
+ylabel('y')
+xlabel('x')
+subplot(4,1,4)
+plot(y(end,1:m/2),y(end,m/2+1:m),'*k')
+title(sprintf('t = %.d c',t(end)));
+ylabel('y')
+xlabel('x')
+
 
