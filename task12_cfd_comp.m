@@ -6,6 +6,7 @@ a0 = 340;
 tau = 0.5*h/a0;
 u = zeros(m,n);
 a = zeros(m,n);
+xgrid = linspace(-1,1,m);
 i1 = linspace(1,13,13 - 1 +1)';
 i2 = linspace(14,39,39 - 14 +1)';
 i3 = linspace(40,51,51 - 40 +1)';
@@ -47,7 +48,29 @@ for j=1:n-1
     end
 end
 
-plot(u(:,10))
+figure (1)
+sgtitle('Одномерное нелинейное волновое уравнение')
 
+subplot(4,1,1)
+plot(xgrid,u(:,1))
+title(sprintf('t = 0 c'));
+ylabel('u, м/с')
+xlabel('x, м')
+subplot(4,1,2)
+plot(xgrid,u(:,16))
+title(sprintf('t = %.d c',tau*16));
+ylabel('u, м/с')
+xlabel('x, м')
+subplot(4,1,3)
+plot(xgrid,u(:,35))
+title(sprintf('t = %.d c',tau*35));
+ylabel('u, м/с')
+xlabel('x, м')
+subplot(4,1,4)
+plot(xgrid,u(:,45))
+title(sprintf('t = %.d c',tau*45));
+ylabel('u, м/с')
+xlabel('x, м')
     
+
 
