@@ -12,6 +12,7 @@ u(2:m-1,2) = 0.5*(u(1:m-2,1) + u(3:m,1));
 u(m,2) = u(m-1,1);
 a = 340;
 tau = h/a;
+xgrid = linspace(0,1,m);
 
 
 for j=3:n
@@ -24,8 +25,22 @@ for j=3:n
     end
 end
 
+figure (1)
+sgtitle('Одномерное волновое уравнение')
 
-plot(u(:,16))
+subplot(4,1,1)
+plot(xgrid,u(:,1))
+title(sprintf('t = %.d c',tau*0));
+subplot(4,1,2)
+plot(xgrid,u(:,16))
+title(sprintf('t = %.d c',tau*16));
+subplot(4,1,3)
+plot(xgrid,u(:,35))
+title(sprintf('t = %.d c',tau*35));
+subplot(4,1,4)
+plot(xgrid,u(:,45))
+title(sprintf('t = %.d c',tau*45));
+
 
 
 
